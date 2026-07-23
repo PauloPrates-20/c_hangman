@@ -1,5 +1,5 @@
 1. Create window and blank canvas :white_check_mark:
-2. Create a letter
+2. Create a letter :white_check_mark:
 3. Create all letters
 4. Draw hang
 5. Create a word
