@@ -9,3 +9,4 @@
 9. Fill the blanks and update the hangman
 10. Create end game screens
 11. Create a screen to fill the word
+12. Create title
