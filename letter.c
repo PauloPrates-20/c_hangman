@@ -13,7 +13,7 @@ static void Draw(Letter *self) {
     DrawRectangleRoundedLinesEx(rec, 0.5f, 6, LINE_THICK, SPRITE_GREEN);
     DrawText(
         TextFormat("%c", self->value),
-        self->pos.x*CELL_SIZE + OFFSET + LINE_THICK + 3,
+        self->pos.x*CELL_SIZE + OFFSET + LINE_THICK + LINE_THICK,
         self->pos.y*CELL_SIZE + OFFSET + LINE_THICK,
         20,
         SPRITE_GREEN
