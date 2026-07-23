@@ -12,5 +12,6 @@ typedef struct Keyboard {
 } Keyboard;
 
 Keyboard KeyboardCtr();
+void KeyboardDstr(Keyboard *board);
 
 #endif // _KEYBOARD_H_

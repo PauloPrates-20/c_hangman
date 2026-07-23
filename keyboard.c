@@ -36,3 +36,8 @@ Keyboard KeyboardCtr() {
 
     return board;
 }
+
+void KeyboardDstr(Keyboard *board) {
+    free(board->letters);
+    board->letters = NULL;
+}
