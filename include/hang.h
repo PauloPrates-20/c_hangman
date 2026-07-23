@@ -24,5 +24,6 @@ typedef struct Hang {
 } Hang;
 
 Hang HangCtr();
+void HangDstr(Hang *hang);
 
 #endif // _HANG_H_

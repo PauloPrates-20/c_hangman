@@ -15,6 +15,7 @@ Hang HangCtr() {
         sprintf(path, "assets/hangman%d.png", i);
         Image img = LoadImage(path);
         sprite_buffer[i] = LoadTextureFromImage(img);
+        UnloadImage(img);
     }
 
     return (Hang) {
@@ -22,4 +23,12 @@ Hang HangCtr() {
         .state = EMPTY,
         .Draw = Draw,
     };
+}
+
+void HangDstr(Hang *hang) {
+    for(uint8_t i = 0; i < HANG_SPRITES; i++) {
+        UnloadTexture(hang->sprites[i]);
+    }
+
+    free(hang->sprites);
 }
