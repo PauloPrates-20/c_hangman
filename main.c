@@ -2,6 +2,7 @@
 #include "config.h"
 #include "keyboard.h"
 #include "hang.h"
+#include "word.h"
 
 static void DrawFrame() {
     Rectangle rec = {
@@ -20,6 +21,7 @@ int main(void) {
     
     Keyboard board = KeyboardCtr();
     Hang hang = HangCtr();
+    Word word = WordCtr("ABCDEFGHIJK");
 
     while(!WindowShouldClose()) {
         BeginDrawing();
@@ -27,6 +29,7 @@ int main(void) {
         ClearBackground(BG_GREEN);
         DrawFrame();
         hang.Draw(&hang);
+        word.Draw(&word);
         board.Draw(&board);
 
         EndDrawing();
