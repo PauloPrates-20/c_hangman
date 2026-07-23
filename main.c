@@ -1,6 +1,7 @@
 #include "raylib.h"
 #include "config.h"
 #include "keyboard.h"
+#include "hang.h"
 
 static void DrawFrame() {
     Rectangle rec = {
@@ -18,12 +19,14 @@ int main(void) {
     SetTargetFPS(60);
     
     Keyboard board = KeyboardCtr();
+    Hang hang = HangCtr();
 
     while(!WindowShouldClose()) {
         BeginDrawing();
 
         ClearBackground(BG_GREEN);
         DrawFrame();
+        hang.Draw(&hang);
         board.Draw(&board);
 
         EndDrawing();
