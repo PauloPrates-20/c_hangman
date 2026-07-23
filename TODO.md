@@ -4,7 +4,7 @@
 4. Draw hang :white_check_mark:
 5. Create a word :white_chek_mark:
 6. Create empty spaces :white_check_mark:
-7. Get pressed letters
+7. Get pressed letters :white_check_mark:
 8. Check if letter is in word
 9. Fill the blanks and update the hangman
 10. Create end game screens

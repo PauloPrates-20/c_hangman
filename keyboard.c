@@ -7,9 +7,26 @@ static void Draw(Keyboard *self) {
     }
 }
 
+static void Update(Keyboard *self) {
+    static bool check = false;
+
+    if(IsMouseButtonDown(MOUSE_BUTTON_LEFT)) {
+        check = true;
+        return;
+    }
+
+    if(check) {
+        for(int i = 0; i < LETTER_COUNT; i++) {
+            self->letters[i].Update(&self->letters[i]);
+        }
+        check = false;
+    }
+}
+
 Keyboard KeyboardCtr() {
     Keyboard board = {
         .Draw = Draw,
+        .Update = Update,
         .letters = malloc(sizeof(Letter)*LETTER_COUNT),
     };
 

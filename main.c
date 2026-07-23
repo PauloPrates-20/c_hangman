@@ -24,6 +24,8 @@ int main(void) {
     Word word = WordCtr("ABCDEFGHIJK");
 
     while(!WindowShouldClose()) {
+        board.Update(&board);
+
         BeginDrawing();
 
         ClearBackground(BG_GREEN);

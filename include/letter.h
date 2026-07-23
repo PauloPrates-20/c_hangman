@@ -6,7 +6,9 @@
 typedef struct Letter {
     char value;
     Vector2 pos;
+    Rectangle rec;
     void (*Draw)(struct Letter *self);
+    void (*Update)(struct Letter *self);
 } Letter;
 
 Letter LetterCtr(char value, Vector2 pos);
