@@ -1,0 +1,15 @@
+#ifndef _KEYBOARD_H_
+#define _KEYBOARD_H_
+
+#include "letter.h"
+
+#define LETTER_COUNT 26
+
+typedef struct Keyboard {
+    Letter *letters;
+    void (*Draw)(struct Keyboard *self);
+} Keyboard;
+
+Keyboard KeyboardCtr();
+
+#endif // _KEYBOARD_H_

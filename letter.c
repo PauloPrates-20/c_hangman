@@ -6,15 +6,15 @@ static void Draw(Letter *self) {
     Rectangle rec = {
         .x = self->pos.x*CELL_SIZE + OFFSET + LINE_THICK,
         .y = self->pos.y*CELL_SIZE + OFFSET + LINE_THICK,
-        .width = 25.0f,
-        .height = 25.0f,
+        .width = CELL_SIZE - 1 - LINE_THICK*2,
+        .height = CELL_SIZE - 1 - LINE_THICK*2,
     };
 
     DrawRectangleRoundedLinesEx(rec, 0.5f, 6, LINE_THICK, SPRITE_GREEN);
     DrawText(
         TextFormat("%c", self->value),
-        self->pos.x*CELL_SIZE + OFFSET + LINE_THICK + 6,
-        self->pos.y*CELL_SIZE + OFFSET + LINE_THICK + 3,
+        self->pos.x*CELL_SIZE + OFFSET + LINE_THICK + 3,
+        self->pos.y*CELL_SIZE + OFFSET + LINE_THICK,
         20,
         SPRITE_GREEN
     );
