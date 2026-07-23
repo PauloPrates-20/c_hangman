@@ -14,7 +14,7 @@ Keyboard KeyboardCtr() {
     };
 
     for(int i = 0; i < LETTER_COUNT; i++) {
-        board.letters[i] = LetterCtr('A' + i, (Vector2){1 + i%(LETTER_COUNT/2), 10 + (i/(LETTER_COUNT/2))});
+        board.letters[i] = LetterCtr('A' + i, (Vector2){1 + i%(LETTER_COUNT/2), 11 + (i/(LETTER_COUNT/2))});
     }
 
     return board;
