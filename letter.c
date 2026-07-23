@@ -4,8 +4,8 @@
 static void Draw(Letter *self) {
     const float LINE_THICK = 3.0f;
     Rectangle rec = {
-        .x = self->pos.x*CELL_SIZE + OFFSET + LINE_THICK,
-        .y = self->pos.y*CELL_SIZE + OFFSET + LINE_THICK,
+        .x = self->pos.x*CELL_SIZE + OFFSET/2 + LINE_THICK,
+        .y = self->pos.y*CELL_SIZE + OFFSET/2 + LINE_THICK,
         .width = CELL_SIZE - 1 - LINE_THICK*2,
         .height = CELL_SIZE - 1 - LINE_THICK*2,
     };
@@ -13,9 +13,9 @@ static void Draw(Letter *self) {
     DrawRectangleRoundedLinesEx(rec, 0.5f, 6, LINE_THICK, SPRITE_GREEN);
     DrawText(
         TextFormat("%c", self->value),
-        self->pos.x*CELL_SIZE + OFFSET + LINE_THICK + LINE_THICK,
-        self->pos.y*CELL_SIZE + OFFSET + LINE_THICK,
-        20,
+        self->pos.x*CELL_SIZE + OFFSET/2 + LINE_THICK*3,
+        self->pos.y*CELL_SIZE + OFFSET/2 + LINE_THICK,
+        CELL_SIZE - LINE_THICK*2,
         SPRITE_GREEN
     );
 }

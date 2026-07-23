@@ -8,8 +8,8 @@
 #define SPRITE_GREEN (Color){0x08, 0x18, 0x20, 0xFF}
 
 // Screen dimensions
-#define CELL_SIZE 25
-#define CELL_COUNT 30
+#define CELL_SIZE 50
+#define CELL_COUNT (750/CELL_SIZE)
 #define OFFSET 75
 
 // Frame
