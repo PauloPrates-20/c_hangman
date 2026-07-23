@@ -1,4 +1,4 @@
-1. Create window and blank canvas
+1. Create window and blank canvas :white_check_mark:
 2. Create a letter
 3. Create all letters
 4. Draw hang

@@ -1,14 +1,15 @@
 #include "raylib.h"
+#include "config.h"
 
 int main(void) {
-    InitWindow(750, 750, "Retro Hangman");
+    InitWindow(CELL_SIZE*CELL_COUNT + OFFSET, CELL_SIZE*CELL_COUNT + OFFSET, "Retro Hangman");
     SetTargetFPS(60);
     
     while(!WindowShouldClose()) {
         BeginDrawing();
 
-        ClearBackground(RAYWHITE);
-        
+        ClearBackground(BG_GREEN);
+
         EndDrawing();
     }
 
