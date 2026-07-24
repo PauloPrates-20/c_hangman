@@ -6,7 +6,7 @@
 6. Create empty spaces :white_check_mark:
 7. Get pressed letters :white_check_mark:
 8. Disable guessed letters :white_check_mark:
-9. Check if letter is in word
+9. Check if letter is in word :white_check_mark:
 10. Fill the blanks and update the hangman
 11. Set cursor to pointer when hovering letters
 12. Create end game screens

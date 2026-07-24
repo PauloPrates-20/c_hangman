@@ -1,8 +1,6 @@
 #include "raylib.h"
 #include "config.h"
-#include "keyboard.h"
-#include "hang.h"
-#include "word.h"
+#include "game.h"
 
 static void DrawFrame() {
     Rectangle rec = {
@@ -19,20 +17,16 @@ int main(void) {
     InitWindow(CELL_SIZE*CELL_COUNT + OFFSET, CELL_SIZE*CELL_COUNT + OFFSET, "Retro Hangman");
     SetTargetFPS(60);
     
-    Keyboard board = KeyboardCtr();
-    Hang hang = HangCtr();
-    Word word = WordCtr("ABCDEFGHIJK");
+    Game game = GameCtr("TESTE");
 
     while(!WindowShouldClose()) {
-        board.Update(&board);
+        game.Update(&game);
 
         BeginDrawing();
 
         ClearBackground(BG_GREEN);
         DrawFrame();
-        hang.Draw(&hang);
-        word.Draw(&word);
-        board.Draw(&board);
+        game.Draw(&game);
 
         EndDrawing();
     }
