@@ -7,8 +7,8 @@
 7. Get pressed letters :white_check_mark:
 8. Disable guessed letters :white_check_mark:
 9. Check if letter is in word :white_check_mark:
-10. Fill the blanks and update the hangman
-11. Set cursor to pointer when hovering letters
+10. Fill the blanks and update the hangman :white_chek_mark:
 12. Create end game screens
+11. Set cursor to pointer when hovering letters
 13. Create a screen to fill the word
 14. Create title

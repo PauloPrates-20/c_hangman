@@ -5,6 +5,11 @@ static void Update(Game *self) {
 
     if(self->board.selected != '\0') {
         bool found = self->word.Check(&self->word, self->board.selected);
+
+        if(!found) {
+            self->hang.state++;
+        }
+
         self->board.selected = '\0';
     }
 }

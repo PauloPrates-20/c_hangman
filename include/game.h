@@ -9,6 +9,7 @@ typedef struct Game {
     Hang hang;
     Word word;
     Keyboard board;
+    bool running;
     void (*Update)(struct Game *self);
     void (*Draw)(struct Game *self);
 } Game;
