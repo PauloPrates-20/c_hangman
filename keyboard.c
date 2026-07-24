@@ -1,5 +1,6 @@
 #include "keyboard.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 static void Draw(Keyboard *self) {
     for(int i = 0; i < LETTER_COUNT; i++) {
@@ -17,7 +18,10 @@ static void Update(Keyboard *self) {
 
     if(check) {
         for(int i = 0; i < LETTER_COUNT; i++) {
-            self->letters[i].Update(&self->letters[i]);
+            if(self->letters[i].active && CheckCollisionPointRec(GetMousePosition(), self->letters[i].rec)) {
+                self->letters[i].active = false;
+                self->selected = self->letters[i].value;
+            }
         }
         check = false;
     }
@@ -28,6 +32,7 @@ Keyboard KeyboardCtr() {
         .Draw = Draw,
         .Update = Update,
         .letters = malloc(sizeof(Letter)*LETTER_COUNT),
+        .selected = '\0',
     };
 
     for(int i = 0; i < LETTER_COUNT; i++) {

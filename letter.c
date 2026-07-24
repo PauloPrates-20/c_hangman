@@ -5,6 +5,10 @@
 #define LINE_THICK 3.0f
 
 static void Draw(Letter *self) {
+    if(!self->active) {
+        return;
+    }
+    
     DrawRectangleRoundedLinesEx(self->rec, 0.5f, 6, LINE_THICK, SPRITE_GREEN);
     DrawText(
         TextFormat("%c", self->value),
@@ -13,12 +17,6 @@ static void Draw(Letter *self) {
         CELL_SIZE - LINE_THICK*2,
         SPRITE_GREEN
     );
-}
-
-static void Update(Letter *self) {
-    if(CheckCollisionPointRec(GetMousePosition(), self->rec)) {
-        printf("Pressed: %c\n", self->value);
-    }
 }
 
 Letter LetterCtr(char value, Vector2 pos) {
@@ -30,10 +28,10 @@ Letter LetterCtr(char value, Vector2 pos) {
     };
     
     return (Letter){
-        value,
-        pos,
-        rec,
+        .value = value,
+        .pos = pos,
+        .rec = rec,
+        .active = true,
         Draw,
-        Update,
     };
 }

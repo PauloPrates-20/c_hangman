@@ -7,6 +7,7 @@
 
 typedef struct Keyboard {
     Letter *letters;
+    char selected;
     void (*Draw)(struct Keyboard *self);
     void (*Update)(struct Keyboard *self);
 } Keyboard;
