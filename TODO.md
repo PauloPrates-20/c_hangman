@@ -9,6 +9,6 @@
 9. Check if letter is in word :white_check_mark:
 10. Fill the blanks and update the hangman :white_chek_mark:
 12. Create end game screens :white_check_mark:
-11. Set cursor to pointer when hovering letters
-13. Create a screen to fill the word
-14. Create title
+13. Create title
+14. Set cursor to pointer when hovering letters
+15. Create a screen to fill the word
