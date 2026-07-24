@@ -22,12 +22,15 @@ static void Draw(Word *self) {
 
 static bool Check(Word *self, char value) {
     bool found = false;
+    self->complete = true;
 
     for(uint8_t i = 0; i < self->size; i++) {
         if(self->word[i] == tolower(value) || self->word[i] == toupper(value)) {
             found = true;
             self->guessed |= (1 << i);
         }
+        
+        if(!(self->guessed & (1 << i))) self->complete = false;
     }
 
     return found;
@@ -40,6 +43,7 @@ Word WordCtr(const char* str) {
         .word = buffer,
         .size = strlen(buffer),
         .guessed = 0,
+        .complete = false,
         .Draw = Draw,
         .Check = Check,
     };

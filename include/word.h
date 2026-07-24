@@ -7,6 +7,7 @@ typedef struct Word {
     const char *word;
     uint8_t size;
     uint16_t guessed;
+    bool complete;
     void (*Draw)(struct Word *self);
     bool (*Check)(struct Word *self, char value);
 } Word;
